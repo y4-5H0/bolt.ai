@@ -9,7 +9,7 @@ function provider({children}) {
     const [userDetail, setUserDetail] = useState()
   return (
     <div>
-        <GoogleOAuthProvider clientId="<your_client_id>">
+        <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
         <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
         <MessagesContext.Provider value={{messages, setMessages}}>
         <NextThemesProvider

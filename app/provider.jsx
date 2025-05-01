@@ -4,9 +4,11 @@ import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { MessagesContext } from '@/context/MessagesCintext'
 
 function provider({children}) {
-    const [messages, setMessages] = React.useState()
+    const [messages, setMessages] = useState()
+    const [userDetail, setUserDetail] = useState()
   return (
     <div>
+        <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
         <MessagesContext.Provider value={{messages, setMessages}}>
         <NextThemesProvider
         attribute="class"

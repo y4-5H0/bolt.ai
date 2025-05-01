@@ -8,9 +8,10 @@ import { GoogleOAuthProvider } from '@react-oauth/google'
 function provider({children}) {
     const [messages, setMessages] = useState()
     const [userDetail, setUserDetail] = useState()
+    const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
   return (
     <div>
-        <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID_KEY}>
+        <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_CLIENT_ID}>
         <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
         <MessagesContext.Provider value={{messages, setMessages}}>
         <NextThemesProvider

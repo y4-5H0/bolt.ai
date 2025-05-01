@@ -11,7 +11,7 @@ function provider({children}) {
 
   return (
     <div>
-        <GoogleOAuthProvider clientId={process.env.GOOGLE_CLIENT_ID}>
+        <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID_KEY}>
         <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
         <MessagesContext.Provider value={{messages, setMessages}}>
         <NextThemesProvider

@@ -9,6 +9,7 @@ import {
 import Lookup from '@/data/Lookup'
 import { Button } from '../ui/button'
 import { useGoogleLogin } from '@react-oauth/google'
+import { UserDetailContext } from '@/context/UserDetailContext'
   
 
 function SignInDialog({openDialog, closeDialog}) {
@@ -24,6 +25,8 @@ function SignInDialog({openDialog, closeDialog}) {
       );
   
       console.log(userInfo);
+        setUserDetail(userInfo?.data)
+        closeDialog(false)
     },
     onError: errorResponse => console.log(errorResponse),
   });

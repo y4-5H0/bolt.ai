@@ -5,14 +5,24 @@ import {
     DialogDescription,
     DialogHeader,
     DialogTitle,
-    DialogTrigger,
   } from "@/components/ui/dialog"
   
 
-function SignDialog() {
+function SignInDialog({openDialog}) {
   return (
-    <div>SignDialog</div>
+    <Dialog open={openDialog}>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Are you absolutely sure?</DialogTitle>
+      <DialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+
   )
 }
 
-export default SignDialog
+export default SignInDialog

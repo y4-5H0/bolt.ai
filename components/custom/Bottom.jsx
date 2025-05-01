@@ -11,10 +11,17 @@ function Bottom() {
     const {messages, setMessages} = useContext(MessagesContext)
     const {userDetail, setUserDetail} = useContext(MessagesContext)
 
-    const onGenerate = (input) => ({
-        role: "user",
-        content: input
-    })
+    const onGenerate = (input) => {
+        if (!userDetail?.name)
+        {
+            return ;
+        }
+        setMessages({
+            role: "user",
+            content: input
+        })
+    }
+
 
     return (
         

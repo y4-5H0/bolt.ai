@@ -9,6 +9,7 @@ import { MessagesContext } from '@/context/MessagesCintext'
 function Bottom() {
     const [userInput, setUserInput] = useState();
     const {messages, setMessages} = useContext(MessagesContext)
+    const {userDetail, setUserDetail} = useContext(MessagesContext)
 
     const onGenerate = (input) => ({
         role: "user",

@@ -9,6 +9,7 @@ function provider({children}) {
     const [userDetail, setUserDetail] = useState()
   return (
     <div>
+        <GoogleOAuthProvider clientId="<your_client_id>">
         <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
         <MessagesContext.Provider value={{messages, setMessages}}>
         <NextThemesProvider
@@ -21,6 +22,7 @@ function provider({children}) {
         </NextThemesProvider>
         </MessagesContext.Provider>
         </UserDetailContext.Provider>
+        </GoogleOAuthProvider>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 "use client"
-import React from 'react'
+import React, {useState} from 'react'
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { MessagesContext } from '@/context/MessagesCintext'
+import { UserDetailContext } from '@/context/UserDetailContext'
 
 function provider({children}) {
     const [messages, setMessages] = useState()
@@ -19,6 +20,7 @@ function provider({children}) {
         {children}
         </NextThemesProvider>
         </MessagesContext.Provider>
+        </UserDetailContext.Provider>
     </div>
   )
 }

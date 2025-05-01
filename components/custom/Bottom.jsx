@@ -19,7 +19,7 @@ function Bottom() {
                     onChange={(event) => setUserInput(event.target.value)}
                         className='outline-none bg-transparent w-full h-32 max-h-56 resize-none'
                     />
-                  {  <ArrowRight className='bg-red-500 p-2 h-8 w-8 rounded-md cursor-pointer' />
+                  {userInput&&  <ArrowRight className='bg-red-500 p-2 h-8 w-8 rounded-md cursor-pointer' />}
                 </div>
                 <div>
                     <Link className='h-5 w-5' />

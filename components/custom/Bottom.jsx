@@ -30,7 +30,7 @@ function Bottom() {
              {Lookup?.SUGGSTIONS.map((suggstion, index)=>(
                 <h2 key={index}
                 className='p-1 px-2 border rounded-full text-sm
-                 text-gray-400 hover:text-white cursor-pointer'
+                 text-gray-400 hover:text-white  cursor-pointer transition-all duration-200 ease-in-out'
                 >{suggstion}</h2>
                 ))}   
             </div>

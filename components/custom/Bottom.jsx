@@ -4,16 +4,19 @@ import Lookup from '@/data/Lookup'
 import { ArrowRight, Link } from 'lucide-react'
 import React, {useContext, useState} from 'react'
 import { MessagesContext } from '@/context/MessagesCintext'
+import { UserDetailContext } from '@/context/UserDetailContext'
 
 
 function Bottom() {
     const [userInput, setUserInput] = useState();
     const {messages, setMessages} = useContext(MessagesContext)
     const {userDetail, setUserDetail} = useContext(MessagesContext)
+    const [openDialog, setOpenDialog] = useState(false)
 
     const onGenerate = (input) => {
         if (!userDetail?.name)
         {
+            setOpenDialog(true)
             return ;
         }
         setMessages({

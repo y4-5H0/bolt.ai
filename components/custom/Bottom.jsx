@@ -25,6 +25,11 @@ function Bottom() {
                     <Link className='h-5 w-5' />
                 </div>
             </div>
+
+            <div>
+             {Lookup?ArrowRight.}   
+            </div>
+
         </div>
     )
 }

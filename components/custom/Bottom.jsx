@@ -9,8 +9,11 @@ function Bottom() {
         <p className='text-gray-400 font-medium'>{Lookup.HERO_DESC}</p>
 
         <div>
+
+        <div className='flex gap-2'>
             <textarea placeholder={Lookup.INPUT_PLACEHOLDER} />
-            <ArrowRight className='absolute right-4 top-2 text-gray-400' size={20} />
+            <ArrowRight className='bg-red-500 p-2 h-8 w-8 rounded-md cursor-pointer' />
+        </div>
         </div>
     </div>
   )

@@ -3,10 +3,12 @@ import Colors from '@/data/Colors';
 import Lookup from '@/data/Lookup'
 import { ArrowRight, Link } from 'lucide-react'
 import React, {useState} from 'react'
+import { useContext } from 'react';
 
 
 function Bottom() {
     const [userInput, setUserInput] = useState();
+    const {messages, setMessages} = useContext(MessagesContext)
 
     const onGenerate = () => {}
 

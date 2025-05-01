@@ -63,7 +63,7 @@ function Bottom() {
                 ))}   
             </div>
 
-            <SignInDialog openDialog={openDialog} setOpenDialog={setOpenDialog}/>
+            <SignInDialog openDialog={openDialog} closeDialog={(v)=>setOpenDialog(v)}/>
 
         </div>
     )

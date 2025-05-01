@@ -8,12 +8,12 @@ import {
   } from "@/components/ui/dialog"
   
 
-function SignInDialog({openDialog}) {
+function SignInDialog({openDialog, closeDialog}) {
   return (
     <Dialog open={openDialog} onOpenChange={closeDialog}>
   <DialogContent>
     <DialogHeader>
-      <DialogTitle>Are you absolutely sure?</DialogTitle>
+      <DialogTitle></DialogTitle>
       <DialogDescription>
         This action cannot be undone. This will permanently delete your account
         and remove your data from our servers.

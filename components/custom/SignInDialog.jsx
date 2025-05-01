@@ -10,6 +10,7 @@ import Lookup from '@/data/Lookup'
 import { Button } from '../ui/button'
 import { useGoogleLogin } from '@react-oauth/google'
 import { UserDetailContext } from '@/context/UserDetailContext'
+import { useContext } from 'react'
   
 
 function SignInDialog({openDialog, closeDialog}) {
@@ -40,7 +41,8 @@ function SignInDialog({openDialog, closeDialog}) {
         <div className='flex flex-col items-center justify-center gap-3'>
         <h2 className='font-bold text-2xl text-center text-white'>{Lookup.SIGNIN_HEADING}</h2>
         <p className='mt-2 text-center'>{Lookup.SIGNIN_SUBHEADING}</p>
-        <Button className='bg-red-500 text-white hover:bg-red-400'>Sign In With Google</Button>
+        <Button className='bg-red-500 text-white hover:bg-red-400 
+        mt-3 ' onClick={googleLogin}>Sign In With Google</Button>
 
         <p>{Lookup.SIGNIn_AGREEMENT_TEXT}</p>
 

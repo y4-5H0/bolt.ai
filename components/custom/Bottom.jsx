@@ -26,9 +26,11 @@ function Bottom() {
                 </div>
             </div>
 
-            <div className='flex flex-wrap max-w-2xl'>
+            <div className='flex flex-wrap max-w-2xl items-center justify-center gap-3'>
              {Lookup?.SUGGSTIONS.map((suggstion, index)=>(
-                <h2 key={index}>{suggstion}</h2>
+                <h2 key={index}
+                className='p-1 px-2 border rounded-full text-sm'
+                >{suggstion}</h2>
                 ))}   
             </div>
 

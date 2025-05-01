@@ -7,6 +7,9 @@ import React, {useState} from 'react'
 
 function Bottom() {
     const [userInput, setUserInput] = useState();
+
+    const onGenerate = () => {}
+
     return (
         
         <div className='flex flex-col items-center justify-center mt-36 xl:mt-52 gap-5'>

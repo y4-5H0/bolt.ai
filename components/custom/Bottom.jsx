@@ -26,8 +26,10 @@ function Bottom() {
                 </div>
             </div>
 
-            <div>
-             {Lookup?.SUGGSTIONS.map((suggstion, index)=>(<h2>{SUGGSTIONS}</h2>)}   
+            <div className='flex flex-wrap max-w-2xl'>
+             {Lookup?.SUGGSTIONS.map((suggstion, index)=>(
+                <h2 key={index}>{suggstion}</h2>
+                ))}   
             </div>
 
         </div>

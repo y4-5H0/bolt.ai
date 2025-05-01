@@ -12,7 +12,7 @@ function Bottom() {
             <h2 className='font-bold text-4xl'>{Lookup.HERO_HEADING}</h2>
             <p className='text-gray-400 font-medium'>{Lookup.HERO_DESC}</p>
 
-            <div className='p-5 border rounded-xl max-w-2xl w-full mt-3'>
+            <div className='p-5 border rounded-xl max-w-xl w-full mt-3'>
 
                 <div className='flex gap-2'>
                     <textarea placeholder={Lookup.INPUT_PLACEHOLDER} 
@@ -26,11 +26,11 @@ function Bottom() {
                 </div>
             </div>
 
-            <div className='flex flex-wrap max-w-2xl items-center justify-center gap-3'>
+            <div className='flex mt-8 flex-wrap max-w-2xl items-center justify-center gap-3'>
              {Lookup?.SUGGSTIONS.map((suggstion, index)=>(
                 <h2 key={index}
                 className='p-1 px-2 border rounded-full text-sm
-                 text-gray-400 hover:text-white  cursor-pointer transition-all duration-200 ease-in-out'
+                 text-gray-400 hover:text-white  cursor-pointer'
                 >{suggstion}</h2>
                 ))}   
             </div>

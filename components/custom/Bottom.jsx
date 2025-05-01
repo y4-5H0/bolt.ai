@@ -27,7 +27,7 @@ function Bottom() {
             </div>
 
             <div>
-             {Lookup?ArrowRight.}   
+             {Lookup?.SUGGSTIONS.map((suggstion, index)=>(<h2>{SUGGSTIONS}</h2>)}   
             </div>
 
         </div>

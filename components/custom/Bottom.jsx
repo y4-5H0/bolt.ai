@@ -5,6 +5,7 @@ import { ArrowRight, Link } from 'lucide-react'
 import React, {useContext, useState} from 'react'
 import { MessagesContext } from '@/context/MessagesCintext'
 import { UserDetailContext } from '@/context/UserDetailContext'
+import SignInDialog from './SignInDialog';
 
 
 function Bottom() {
@@ -61,6 +62,8 @@ function Bottom() {
                 >{suggstion}</h2>
                 ))}   
             </div>
+
+            <SignInDialog openDialog={openDialog} setOpenDialog={setOpenDialog}/>
 
         </div>
     )

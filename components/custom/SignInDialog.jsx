@@ -10,7 +10,7 @@ import {
 
 function SignInDialog({openDialog}) {
   return (
-    <Dialog open={openDialog}>
+    <Dialog open={openDialog} onOpenChange={closeDialog}>
   <DialogContent>
     <DialogHeader>
       <DialogTitle>Are you absolutely sure?</DialogTitle>

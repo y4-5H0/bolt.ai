@@ -60,10 +60,11 @@ function SignInDialog({ openDialog, closeDialog }) {
           </DialogTitle>
 
           <DialogDescription>
-  <p className="mt-2 text-center text-muted-foreground text-sm">
-    {Lookup.SIGNIN_SUBHEADING}
-  </p>
-</DialogDescription>
+            <p className="mt-2 text-center text-muted-foreground text-sm">
+              {Lookup.SIGNIN_SUBHEADING}
+            </p>
+          </DialogDescription>
+
         </DialogHeader>
 
         <div className="flex flex-col items-center justify-center gap-3 mt-4">

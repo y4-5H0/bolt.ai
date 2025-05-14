@@ -23,21 +23,14 @@ function Bottom() {
             return ;
         }
 
-        const workspaceId = CreateWorkspace({
-            user:userDetail._id,
-            messages: [
-                {
-                    role: "user",
-                    content: input
-                }
-            ]
-        })
-
-        setMessages({
+        const msg={
             role: "user",
             content: input
-        })
-        await workspaceId = CreateWorkspace({
+        }
+
+        setMessages(msg)
+
+        workspaceId = await CreateWorkspace({
             user:userDetail._id,
             messages: [
                 {
@@ -45,7 +38,7 @@ function Bottom() {
                     content: input
                 }
             ]
-    }
+    })
 
 
     return (

@@ -1,6 +1,7 @@
 import Provider  from "./provider";
 import "./globals.css";
 import Header from "@/components/custom/Header";
+import ConvexClientProvider from "./ConvexClientProvider";
 
 
 export const metadata = {
@@ -14,10 +15,15 @@ export default function RootLayout({ children }) {
       <body 
       >
 
+      <ConvexClientProvider>
       <Provider>
         <Header />
         {children}
         </Provider>
+      </ConvexClientProvider>
+
+
+
       </body>
     </html>
   );

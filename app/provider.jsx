@@ -8,9 +8,9 @@ import { useConvex } from 'convex/react'
 import { api } from '@/convex/_generated/api'
 
 function provider({children}) {
-    const [messages, setMessages] = useState()
-    const [userDetail, setUserDetail] = useState()
-    const convex=useConvex()
+    const [messages, setMessages] = useState();
+    const [userDetail, setUserDetail] = useState();
+    const convex=useConvex();
 
     useEffect(() => {
       IsAuthenticated();

@@ -7,6 +7,8 @@ import { MessagesContext } from '@/context/MessagesCintext'
 import { UserDetailContext } from '@/context/UserDetailContext'
 import SignInDialog from './SignInDialog';
 import { useMutation } from 'convex/react';
+import { api } from '@/convex/_generated/api';
+import { useRouter } from 'next/navigation';
 
 
 function Bottom() {
@@ -15,7 +17,7 @@ function Bottom() {
     const {userDetail, setUserDetail} = useContext(MessagesContext)
     const [openDialog, setOpenDialog] = useState(false)
     const CreateWorkspace = useMutation(api.workspace.CreateWorkspace)
-    const 
+    const router = useRouter();
 
     const onGenerate = async(input) => {
         if (!userDetail?.name)
@@ -36,6 +38,7 @@ function Bottom() {
             messages: [msg]
         });
         console.log(workspaceId);
+        router.push('/workspace/'+workspaceId);
 
     }
 

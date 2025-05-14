@@ -15,8 +15,9 @@ function Bottom() {
     const {userDetail, setUserDetail} = useContext(MessagesContext)
     const [openDialog, setOpenDialog] = useState(false)
     const CreateWorkspace = useMutation(api.workspace.CreateWorkspace)
+    const 
 
-    const onGenerate = (input) => {
+    const onGenerate = async(input) => {
         if (!userDetail?.name)
         {
             setOpenDialog(true)
@@ -30,16 +31,13 @@ function Bottom() {
 
         setMessages(msg)
 
-        workspaceId = await CreateWorkspace({
+       const workspaceId = await CreateWorkspace({
             user:userDetail._id,
-            messages: [
-                {
-                    role: "user",
-                    content: input
-                }
-            ]
-    })
+            messages: [msg]
+        });
+        console.log(workspaceId);
 
+    }
 
     return (
         

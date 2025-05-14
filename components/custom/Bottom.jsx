@@ -22,10 +22,29 @@ function Bottom() {
             setOpenDialog(true)
             return ;
         }
+
+        const workspaceId = CreateWorkspace({
+            user:userDetail._id,
+            messages: [
+                {
+                    role: "user",
+                    content: input
+                }
+            ]
+        })
+
         setMessages({
             role: "user",
             content: input
         })
+        await workspaceId = CreateWorkspace({
+            user:userDetail._id,
+            messages: [
+                {
+                    role: "user",
+                    content: input
+                }
+            ]
     }
 
 

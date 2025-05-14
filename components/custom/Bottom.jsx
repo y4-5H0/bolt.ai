@@ -14,7 +14,7 @@ import { useRouter } from 'next/navigation';
 function Bottom() {
     const [userInput, setUserInput] = useState();
     const { messages, setMessages } = useContext(MessagesContext);
-    const { userDetail, setUserDetail } = useContext(MessagesContext);
+    const { userDetail, setUserDetail } = useContext(UserDetailContext);
     const [openDialog, setOpenDialog] = useState(false);
     const CreateWorkspace = useMutation(api.workspace.CreateWorkspace);
     const router = useRouter();

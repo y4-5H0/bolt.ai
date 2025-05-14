@@ -8,4 +8,10 @@ export default defineSchema({
         picture:v.string(),
         uid:v.string(),
     }),
+    workspaces:defineTable({
+        name:v.string(),
+        owner:v.string(),
+        members:v.array(v.string()),
+        id:v.string(),
+    }),
 });

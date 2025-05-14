@@ -1,0 +1,2 @@
+<!-- rename this file into .env.local than add your own google client id -->
+NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID_KEY= "your-google-client-id"

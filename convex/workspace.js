@@ -1,5 +1,5 @@
 import { mutation } from "./_generated/server";
-import { v } from "./_generated/values";
+import { v } from "convex/values";
 
 export const CreateWorkspace = mutation({
     args: {
@@ -7,10 +7,11 @@ export const CreateWorkspace = mutation({
         user: v.id('users'),
     },
     handler: async ({ctx, args}) => {
-        const result = await ctx.db.insert("workspaces", {
+        const workspacesId = await ctx.db.insert("workspaces", {
             messages: args.messages,
             user: args.user,
         });
+        return workspacesId;
 
     }
 

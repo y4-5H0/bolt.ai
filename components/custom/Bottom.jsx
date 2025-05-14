@@ -6,6 +6,7 @@ import React, {useContext, useState} from 'react'
 import { MessagesContext } from '@/context/MessagesCintext'
 import { UserDetailContext } from '@/context/UserDetailContext'
 import SignInDialog from './SignInDialog';
+import { useMutation } from 'convex/react';
 
 
 function Bottom() {
@@ -13,6 +14,7 @@ function Bottom() {
     const {messages, setMessages} = useContext(MessagesContext)
     const {userDetail, setUserDetail} = useContext(MessagesContext)
     const [openDialog, setOpenDialog] = useState(false)
+    const CreateWorkspace = useMutation(api.workspace.CreateWorkspace)
 
     const onGenerate = (input) => {
         if (!userDetail?.name)

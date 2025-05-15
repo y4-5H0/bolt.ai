@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Hero from "@/components/custom/Hero";
 import { Button } from "@/components/ui/button";
-import Bottom from "@/components/custom/Bottom";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Bottom />
+    <div className="mx-auto max-h-1vh overflow-hidden">
+      <Hero /> 
     </div>
   );
 }

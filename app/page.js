@@ -1,4 +1,4 @@
-import Hero from "@/components/custom/Hero";
+import Hero from "@/components/custom/Bottom";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 

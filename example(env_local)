@@ -1,2 +1,6 @@
 <!-- rename this file into .env.local than add your own google client id -->
 NEXT_PUBLIC_GOOGLE_AUTH_CLIENT_ID_KEY= "your-google-client-id"
+CONVEX_DEPLOYMENT="convex-deployment-id"
+NEXT_PUBLIC_CONVEX_URL= "https://convex.dev/your-convex-url"
+NEXT_PUBLIC_GEMINI_API_KEY= "your-gemini-api-key"
+NEXT_PUBLIC_PAYPAL_CLIENT_Id= "your-paypal-client-id"
